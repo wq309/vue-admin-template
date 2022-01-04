@@ -36,7 +36,18 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    before: require('./mock/mock-server.js')
+    proxy: {
+      //  使用代理服务器
+      '/api': {
+        //  只要遇到请求地址中有api的就会进来
+        /*
+         代理服务器：http://localhost:8080，
+         后端服务器：http://ihrm-java.itheima.net
+         */
+        target: 'http://ihrm-java.itheima.net' //  使用代理服务器想后端服务器发送请求，需要提供后端服务器的地址
+      }
+    }
+    // before: require('./mock/mock-server.js')
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
