@@ -30,7 +30,7 @@
           </el-table-column>
         </el-table>
         <!-- 分页组件 -->
-        <el-row type="flex" justify="center`" align="middle" style="height: 60px">
+        <el-row type="flex" justify="center" align="middle" style="height: 60px">
           <el-pagination layout="prev, pager, next" />
         </el-row>
       </el-card>
